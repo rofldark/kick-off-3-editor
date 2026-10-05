@@ -1,0 +1,17 @@
+# Never commit ROMs or anything extracted from them
+*.sfc
+*.smc
+*.swc
+*.fig
+*.rom
+texte/
+build/
+out/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Internal project notes for Claude Code
+CLAUDE.md

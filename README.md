@@ -10,11 +10,31 @@ and finally correct those typos that bugged you as a kid.**
 ![Platform](https://img.shields.io/badge/ROM-SNES%20LoROM-8A2BE2)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
-[Deutsch](README.de.md) · [Quick start](#-quick-start) · [Known typos](#-known-typos--help-wanted) · [ROM notes](docs/ROM_NOTES.md)
+[Deutsch](README.de.md) · [Web app](#-web-app-no-install) · [Quick start](#-quick-start) · [Known typos](#-known-typos--help-wanted) · [ROM notes](docs/ROM_NOTES.md)
 
 </div>
 
 ---
+
+## 🌐 Web app (no install)
+
+Prefer clicking over typing commands? Open the **Text Studio** in your browser, drop in your ROM,
+edit the texts and download the fixed ROM (or a patch):
+
+**https://rofldark.github.io/kickoff3-text-tools/**
+
+- 🔒 **Your ROM never leaves your browser.** There is no server: the page is plain HTML + JavaScript and
+  is not even allowed to make network requests (its Content-Security-Policy says `connect-src 'none'`).
+- ✏️ Edit menus, in-game texts and player names per language, with live length checks, search,
+  an "only changed" filter and buttons for Ä Ö Ü Ç.
+- 💾 Save the fixed ROM, an `.ips` / `.bps` patch, or your edits as a small JSON file. Edits are also
+  remembered in your browser between visits (only the texts, never the ROM).
+- 🇩🇪 / 🇬🇧 Interface in German and English.
+
+The web app and the command line tool produce **byte-identical** ROMs (checked by the tests).
+You can also run the web app locally: open `docs/index.html` in a browser.
+
+> The page is published with GitHub Pages from the `docs/` folder.
 
 > *"DEUTSCHE" in the language menu, "Yuventus" instead of Juventus, "Assesment" in the
 > team screen…* Every kid who played this game noticed. Now you can fix it in five minutes.
@@ -125,11 +145,13 @@ reverse-engineering notes are in [docs/ROM_NOTES.md](docs/ROM_NOTES.md).
 ## 🧪 Tests
 
 ```bash
-python -m unittest discover tests                 # unit tests only
+python -m unittest discover tests                 # Python tool: unit tests only
 KO3_ROM="Kick Off 3.sfc" python -m unittest discover tests   # full tests with your ROM
+KO3_ROM="Kick Off 3.sfc" node --test tests/core.test.js      # web app core + comparison with the Python tool
 ```
 
-(PowerShell: `$env:KO3_ROM="Kick Off 3.sfc"`.)
+(PowerShell: `$env:KO3_ROM="Kick Off 3.sfc"`.) The Node test builds the same fixes with both
+implementations and requires the ROMs to be byte-identical, including `--repack`.
 
 ## ⚖️ Legal
 

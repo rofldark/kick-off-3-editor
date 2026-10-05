@@ -6,6 +6,12 @@ Alle nennenswerten Änderungen an diesem Projekt. Format nach
 ## [Unreleased]
 
 ### Added
+- Web-App „Kick Off 3 Text Studio“ in `docs/` (HTML/CSS/JS ohne Build, für GitHub Pages): ROM im Browser laden,
+  Texte bearbeiten, korrigierte ROM bzw. `.bps`/`.ips` speichern, Änderungen als JSON sichern/laden,
+  Autosave im Browser, Oberfläche Deutsch/Englisch. Die ROM verlässt den Browser nie
+  (CSP `connect-src 'none'`).
+- `docs/core.js`: JavaScript-Portierung der Tool-Logik; `tests/core.test.js` vergleicht sie
+  byte-genau mit dem Python-Tool (auch `--repack`)
 - `kickoff3_text.py` mit den Befehlen `dump`, `insert`, `verify`, `patch`, `apply` und `info`
 - Auslesen von Menütexten (688), Match-Texten (219) und Spielernamen (2340),
   nach Sprache getrennt (`1_menus_<sprache>.txt`, `1_menus_shared.txt`, `2_ingame_<sprache>.txt`,

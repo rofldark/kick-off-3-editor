@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The page can not talk to the network at all: your ROM never leaves the browser. -->
+  <meta http-equiv="Content-Security-Policy" content="connect-src 'none'; form-action 'none'; base-uri 'none'">
+  <title>Kick Off 3 Text Studio</title>
+  <meta name="description" content="Edit the texts of the SNES game Kick Off 3 - European Challenge directly in your browser. Your ROM never leaves your computer.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%BD%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="./" aria-label="Kick Off 3 Text Studio">
+      <span class="ball" aria-hidden="true">⚽</span>
+      <span class="brand-text">KICK OFF 3 <small>TEXT STUDIO</small></span>
+    </a>
+    <div class="top-actions">
+      <span class="privacy" id="privacyChip"></span>
+      <button class="chip" id="langBtn" type="button" aria-label="Language / Sprache">DE</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="intro" class="hero">
+      <h1 id="heroTitle"></h1>
+      <p class="lead" id="heroLead"></p>
+      <label id="drop" class="drop" tabindex="0">
+        <input id="file" type="file" accept=".sfc,.smc,.swc,.fig,.rom,.bin" hidden>
+        <span class="drop-icon" aria-hidden="true">📼</span>
+        <span class="drop-title" id="dropTitle"></span>
+        <span class="drop-or" id="dropOr"></span>
+        <span class="drop-hint" id="dropHint"></span>
+      </label>
+      <div id="loadError" class="banner err" hidden></div>
+      <ul class="features" id="features"></ul>
+    </section>
+
+    <section id="studio" hidden>
+      <div class="rominfo" id="romInfo"></div>
+      <div class="banner warn" id="romBanner" hidden></div>
+
+      <div class="bar">
+        <div class="tabs" id="tabs" role="tablist"></div>
+        <div class="summary" id="summary" aria-live="polite"></div>
+      </div>
+
+      <div class="actions">
+        <button class="btn primary" id="dlRom" type="button"></button>
+        <button class="btn" id="dlBps" type="button"></button>
+        <button class="btn" id="dlIps" type="button"></button>
+        <span class="spacer"></span>
+        <button class="btn ghost" id="exportBtn" type="button"></button>
+        <button class="btn ghost" id="importBtn" type="button"></button>
+        <input id="importFile" type="file" accept=".json,application/json" hidden>
+        <button class="btn ghost danger" id="resetBtn" type="button"></button>
+      </div>
+
+      <div class="banner err" id="errors" hidden></div>
+
+      <div class="filters">
+        <div class="chips" id="langChips"></div>
+        <input class="search" id="search" type="search" autocomplete="off" spellcheck="false">
+        <label class="check"><input type="checkbox" id="onlyChanged"> <span id="onlyChangedLabel"></span></label>
+      </div>
+
+      <div class="specials" id="specials"></div>
+
+      <details class="options">
+        <summary id="optSummary"></summary>
+        <div class="opt-grid">
+          <label class="check"><input type="checkbox" id="optRepack"> <span id="optRepackLabel"></span></label>
+          <p class="muted" id="optRepackHelp"></p>
+          <label class="check">
+            <span id="optPadLabel"></span>
+            <select id="optPad"><option value="nul"></option><option value="space"></option></select>
+          </label>
+        </div>
+      </details>
+
+      <div class="list" id="rows"></div>
+      <div class="pager" id="pager"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p id="footLegal"></p>
+    <p><a href="https://github.com/rofldark/kickoff3-text-tools" rel="noopener">GitHub</a> · MIT</p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="core.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

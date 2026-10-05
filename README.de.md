@@ -10,11 +10,31 @@ wieder einsetzen – und endlich die Tippfehler beheben, die einen schon als Kin
 ![Platform](https://img.shields.io/badge/ROM-SNES%20LoROM-8A2BE2)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
-[English](README.md) · [Schnellstart](#-schnellstart) · [Bekannte Fehler](#-bekannte-tippfehler--hilfe-willkommen) · [ROM-Notizen](docs/ROM_NOTES.md)
+[English](README.md) · [Web-App](#-web-app-ohne-installation) · [Schnellstart](#-schnellstart) · [Bekannte Fehler](#-bekannte-tippfehler--hilfe-willkommen) · [ROM-Notizen](docs/ROM_NOTES.md)
 
 </div>
 
 ---
+
+## 🌐 Web-App (ohne Installation)
+
+Lieber klicken als Befehle tippen? Öffne das **Text Studio** im Browser, ziehe deine ROM hinein,
+bearbeite die Texte und lade die korrigierte ROM (oder einen Patch) herunter:
+
+**https://rofldark.github.io/kickoff3-text-tools/**
+
+- 🔒 **Deine ROM verlässt nie den Browser.** Es gibt keinen Server: Die Seite besteht nur aus HTML und
+  JavaScript und darf nicht einmal Netzwerkanfragen stellen (ihre Content-Security-Policy sagt `connect-src 'none'`).
+- ✏️ Menüs, Spieltexte und Spielernamen je Sprache bearbeiten, mit Live-Längenprüfung, Suche,
+  Filter „nur geänderte“ und Buttons für Ä Ö Ü Ç.
+- 💾 Speichern als korrigierte ROM, `.ips`-/`.bps`-Patch oder als kleine JSON-Datei mit deinen Änderungen.
+  Die Änderungen merkt sich der Browser außerdem zwischen den Besuchen (nur die Texte, nie die ROM).
+- 🇩🇪 / 🇬🇧 Oberfläche auf Deutsch und Englisch.
+
+Web-App und Kommandozeilen-Tool erzeugen **byte-identische** ROMs (von den Tests geprüft).
+Die Web-App läuft auch lokal: einfach `docs/index.html` im Browser öffnen.
+
+> Die Seite wird per GitHub Pages aus dem Ordner `docs/` veröffentlicht.
 
 > *„DEUTSCHE“ im Sprachmenü, „Yuventus“ statt Juventus, „Assesment“ im Team-Screen …*
 > Jedem Kind ist das aufgefallen. Jetzt lässt es sich in fünf Minuten beheben.
@@ -125,11 +145,13 @@ Reverse-Engineering-Notizen stehen in [docs/ROM_NOTES.md](docs/ROM_NOTES.md).
 ## 🧪 Tests
 
 ```bash
-python -m unittest discover tests                            # nur Unit-Tests
+python -m unittest discover tests                            # Python-Tool: nur Unit-Tests
 KO3_ROM="Kick Off 3.sfc" python -m unittest discover tests   # volle Tests mit deiner ROM
+KO3_ROM="Kick Off 3.sfc" node --test tests/core.test.js      # Web-App-Kern + Vergleich mit dem Python-Tool
 ```
 
-(PowerShell: `$env:KO3_ROM="Kick Off 3.sfc"`.)
+(PowerShell: `$env:KO3_ROM="Kick Off 3.sfc"`.) Der Node-Test baut dieselben Fixes mit beiden
+Implementierungen und verlangt byte-identische ROMs, auch bei `--repack`.
 
 ## ⚖️ Rechtliches
 

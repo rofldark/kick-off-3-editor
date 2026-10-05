@@ -8,22 +8,19 @@
   // --- texts -----------------------------------------------------------------
   const I18N = {
     en: {
-      privacy: "🔒 ROM stays in your browser",
-      heroTitle: "Fix the texts of <em>Kick Off 3</em>",
-      heroLead: "Load your own ROM, correct typos or translate menus, and save the fixed ROM or a shareable patch. Everything runs on your computer. Nothing is uploaded.",
+      privacy: "Your ROM stays in your browser.",
+      heroTitle: "Edit the texts of Kick Off 3",
+      heroLead: "Load your own ROM, fix typos or translate menus, and save the changed ROM or a patch. Everything runs in your browser, nothing is uploaded.",
       dropTitle: "Drop your ROM here",
       dropOr: "or click to choose a file",
       dropHint: "Kick Off 3 - European Challenge (Europe) · .sfc / .smc",
-      f1: ["Edit", "Menus, in-game texts and 2340 player names in all five languages."],
-      f2: ["Save", "Download the fixed ROM, or an IPS/BPS patch to share without the ROM."],
-      f3: ["Safe", "Length checks, automatic header checksum, verification after every build."],
       tabMenu: "Menus", tabMatch: "In-game", tabNames: "Player names",
       lShared: "shared", search: "Search offset or text…", onlyChanged: "Only changed",
       specials: "Special letters:",
       optSummary: "Options", optRepack: "Allow longer menu texts (--repack, experimental)",
       optRepackHelp: "Re-packs all menu texts (identical texts share space) and rewrites the game's index table. About 500 bytes of headroom. Please test the result in an emulator.",
       optPad: "Pad shorter menu texts with ", padNul: "zero bytes (default)", padSpace: "spaces",
-      dlRom: "⬇ Download fixed ROM", dlBps: "Patch (.bps)", dlIps: "Patch (.ips)",
+      dlRom: "Download ROM", dlBps: "Patch (.bps)", dlIps: "Patch (.ips)",
       exportBtn: "Save edits…", importBtn: "Load edits…", resetBtn: "Reset all",
       resetConfirm: "Discard all {n} edits?",
       changes: "{n} changed", errorsN: "{n} problems",
@@ -35,11 +32,11 @@
       loadFailed: "This file does not look like Kick Off 3 (could not find the text tables).",
       tooBig: "That file is too large for a SNES ROM of this game.",
       hLen: "max {max}", hExact: "exactly {max}", hNames: "max {max}",
-      center: "Center the text in the available width", reset: "Reset this line",
+      btnCenter: "Center", btnReset: "Undo", center: "Center the text in the available width", reset: "Undo changes to this line",
       eBadChar: "“{c}” can not be shown by the game font. Use \\xNN for raw bytes. Known capitals: Ä Ö Ü Ç.",
       eBadEsc: "Invalid escape near “{c}”. Use \\xNN (two hex digits) or \\\\ for a backslash.",
       eTooLong: "{len} characters, only {max} fit. Shorten it or enable longer menu texts in the options.",
-      eExact: "{len} characters, must be exactly {max} (count the spaces, or use ⇔ to center).",
+      eExact: "{len} characters, must be exactly {max} (count the spaces or use “Center”).",
       eNames: "{len} characters, max {max}.",
       wNeedRepack: "{len} characters, original {max}. Will be re-packed (experimental).",
       eNoRoom: "No room left for “{text}” ({need} bytes needed, {free} free). Shorten some texts.",
@@ -57,22 +54,19 @@
       footLegal: "Fan tool, not affiliated with the owners of Kick Off 3. No ROM or game data is included, bring your own copy. Nothing you load leaves this page.",
     },
     de: {
-      privacy: "🔒 ROM bleibt in deinem Browser",
-      heroTitle: "Korrigiere die Texte von <em>Kick Off 3</em>",
-      heroLead: "Lade deine eigene ROM, behebe Tippfehler oder übersetze Menüs und speichere die korrigierte ROM oder einen weitergebbaren Patch. Alles läuft auf deinem Rechner, nichts wird hochgeladen.",
+      privacy: "Deine ROM bleibt in deinem Browser.",
+      heroTitle: "Texte von Kick Off 3 bearbeiten",
+      heroLead: "Lade deine eigene ROM, behebe Tippfehler oder übersetze Menüs und speichere die geänderte ROM oder einen Patch. Alles läuft im Browser, nichts wird hochgeladen.",
       dropTitle: "ROM hier ablegen",
       dropOr: "oder klicken, um eine Datei zu wählen",
       dropHint: "Kick Off 3 - European Challenge (Europe) · .sfc / .smc",
-      f1: ["Bearbeiten", "Menüs, Spieltexte und 2340 Spielernamen in allen fünf Sprachen."],
-      f2: ["Speichern", "Fertige ROM herunterladen oder einen IPS/BPS-Patch ohne ROM weitergeben."],
-      f3: ["Sicher", "Längenprüfung, automatische Header-Prüfsumme, Kontrolle nach jedem Bauen."],
       tabMenu: "Menüs", tabMatch: "Im Spiel", tabNames: "Spielernamen",
       lShared: "gemeinsam", search: "Offset oder Text suchen…", onlyChanged: "Nur geänderte",
       specials: "Sonderbuchstaben:",
       optSummary: "Optionen", optRepack: "Längere Menütexte erlauben (--repack, experimentell)",
       optRepackHelp: "Packt alle Menütexte neu (gleiche Texte teilen sich Platz) und schreibt die Index-Tabelle des Spiels um. Etwa 500 Byte Reserve. Bitte das Ergebnis im Emulator testen.",
       optPad: "Kürzere Menütexte auffüllen mit ", padNul: "Nullbytes (Standard)", padSpace: "Leerzeichen",
-      dlRom: "⬇ Korrigierte ROM laden", dlBps: "Patch (.bps)", dlIps: "Patch (.ips)",
+      dlRom: "ROM herunterladen", dlBps: "Patch (.bps)", dlIps: "Patch (.ips)",
       exportBtn: "Änderungen sichern…", importBtn: "Änderungen laden…", resetBtn: "Alles zurücksetzen",
       resetConfirm: "Alle {n} Änderungen verwerfen?",
       changes: "{n} geändert", errorsN: "{n} Probleme",
@@ -84,11 +78,11 @@
       loadFailed: "Diese Datei sieht nicht nach Kick Off 3 aus (Texttabellen nicht gefunden).",
       tooBig: "Die Datei ist für eine SNES-ROM dieses Spiels zu groß.",
       hLen: "max. {max}", hExact: "genau {max}", hNames: "max. {max}",
-      center: "Text in der verfügbaren Breite zentrieren", reset: "Diese Zeile zurücksetzen",
+      btnCenter: "Zentrieren", btnReset: "Zurück", center: "Text in der verfügbaren Breite zentrieren", reset: "Änderung an dieser Zeile rückgängig machen",
       eBadChar: "„{c}“ kann der Spielfont nicht darstellen. Rohbytes als \\xNN schreiben. Bekannte Großbuchstaben: Ä Ö Ü Ç.",
       eBadEsc: "Ungültige Escape-Folge bei „{c}“. \\xNN (zwei Hex-Ziffern) oder \\\\ für einen Backslash verwenden.",
       eTooLong: "{len} Zeichen, es passen nur {max}. Kürzen oder in den Optionen längere Menütexte erlauben.",
-      eExact: "{len} Zeichen, es müssen genau {max} sein (Leerzeichen mitzählen oder mit ⇔ zentrieren).",
+      eExact: "{len} Zeichen, es müssen genau {max} sein (Leerzeichen mitzählen oder „Zentrieren“ verwenden).",
       eNames: "{len} Zeichen, max. {max}.",
       wNeedRepack: "{len} Zeichen, Original {max}. Wird neu gepackt (experimentell).",
       eNoRoom: "Kein Platz mehr für „{text}“ ({need} Byte nötig, {free} frei). Texte kürzen.",
@@ -130,7 +124,6 @@
     $("dropTitle").textContent = t("dropTitle");
     $("dropOr").textContent = t("dropOr");
     $("dropHint").textContent = t("dropHint");
-    $("features").innerHTML = ["f1", "f2", "f3"].map((k) => `<li><b>${esc(I18N[ui][k][0])}</b>${esc(I18N[ui][k][1])}</li>`).join("");
     $("search").placeholder = t("search");
     $("onlyChangedLabel").textContent = t("onlyChanged");
     $("optSummary").textContent = t("optSummary");
@@ -225,8 +218,8 @@
       `<span class="orig" title="${esc(it.ui)}">${esc(it.ui) || "&nbsp;"}</span>` +
       `<input class="txt" data-id="${it.id}" value="${esc(it.text)}" spellcheck="false" autocomplete="off" autocapitalize="off" aria-label="${esc(t("colNew"))} ${K.hex(it.off)}">` +
       `<span class="cnt"></span>` +
-      `<span class="rbtns">${it.kind === "match" ? `<button type="button" data-act="center" title="${esc(t("center"))}">⇔</button>` : ""}` +
-      `<button type="button" data-act="reset" title="${esc(t("reset"))}" hidden>↺</button></span></div>`;
+      `<span class="rbtns">${it.kind === "match" ? `<button type="button" data-act="center" title="${esc(t("center"))}">${esc(t("btnCenter"))}</button>` : ""}` +
+      `<button type="button" data-act="reset" title="${esc(t("reset"))}" hidden>${esc(t("btnReset"))}</button></span></div>`;
   }
 
   function updateRow(row, it) {

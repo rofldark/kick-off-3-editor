@@ -1,6 +1,8 @@
 <div align="center">
 
-# ⚽ Kick Off 3 – Text Tools
+<img src="docs/img/title.png" alt="Kick Off 3 – European Challenge" width="420">
+
+# Kick Off 3 – Text Tools
 
 **Dump, fix and re-insert every text of the SNES classic *Kick Off 3: European Challenge* –
 and finally correct those typos that bugged you as a kid.**
@@ -158,7 +160,8 @@ implementations and requires the ROMs to be byte-identical, including `--repack`
 This project contains **only tools and documentation**, no ROM, no game text dumps and no
 copyrighted game data. You need your own legally obtained copy of the game.
 *Kick Off 3* is a trademark/copyright of its respective owners;
-this is a fan project and not affiliated with them. Patches you create contain
+this is a fan project and not affiliated with them. The title screen image is a screenshot of the
+game, shown only to identify it; all rights to it belong to the owners. Patches you create contain
 only the differences to the original ROM.
 
 ## 🤝 Contributing

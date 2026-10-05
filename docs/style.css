@@ -46,7 +46,8 @@ a { color: var(--accent); }
 
 /* start page */
 .hero { max-width: 620px; margin: 0 auto; padding: 48px 0 16px; }
-.hero h1 { font-size: 26px; line-height: 1.25; margin: 0 0 10px; font-weight: 600; }
+.logo { display: block; max-width: 100%; height: auto; margin: 0 0 20px; }
+.hero h1 {font-size: 26px; line-height: 1.25; margin: 0 0 10px; font-weight: 600; }
 .lead { margin: 0 0 24px; color: var(--muted); }
 .drop {
   display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center;

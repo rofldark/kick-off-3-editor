@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/img/title.png" alt="Kick Off 3 – European Challenge" width="420">
+<img src="docs/img/title.png" alt="Kick Off 3 Editor" width="420">
 
 # Kick Off 3 Editor
 
@@ -160,8 +160,8 @@ Implementierungen und verlangt byte-identische ROMs, auch bei `--repack`.
 Dieses Projekt enthält **nur Werkzeuge und Dokumentation**: keine ROM, keine Text-Dumps und keine
 urheberrechtlich geschützten Spieldaten. Du brauchst deine eigene, legal erworbene Kopie des Spiels.
 *Kick Off 3* ist Marke bzw. Eigentum der jeweiligen Rechteinhaber; dies ist ein Fanprojekt ohne
-Verbindung zu ihnen. Das Titelbild ist ein Screenshot des Spiels und dient nur zur Kennzeichnung;
-alle Rechte daran liegen bei den Rechteinhabern. Von dir erzeugte Patches enthalten nur die Unterschiede zur Original-ROM.
+Verbindung zu ihnen. Das Titelbild ist eine eigene, vom Stil des Spiels inspirierte Grafik
+und keine Kopie. Von dir erzeugte Patches enthalten nur die Unterschiede zur Original-ROM.
 
 ## 🤝 Mitmachen
 

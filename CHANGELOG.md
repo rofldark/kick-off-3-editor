@@ -24,5 +24,6 @@ Alle nennenswerten Änderungen an diesem Projekt. Format nach
 
 ### Changed
 - Projekt umbenannt in „Kick Off 3 Editor“ (GitHub-Repo `kick-off-3-editor`) für bessere Auffindbarkeit
+- Neues, eigenes Titelbild (inspiriert vom Spiel, keine Kopie) statt eines Spiel-Screenshots
 - Für die Veröffentlichung vorbereitet: Ausgabe und Dateinamen auf Englisch, Textdumps
   (`texte/`) und ROMs sind per `.gitignore` ausgeschlossen

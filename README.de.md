@@ -2,7 +2,7 @@
 
 <img src="docs/img/title.png" alt="Kick Off 3 – European Challenge" width="420">
 
-# Kick Off 3 – Text Tools
+# Kick Off 3 Editor
 
 **Alle Texte des SNES-Klassikers *Kick Off 3: European Challenge* auslesen, korrigieren und
 wieder einsetzen – und endlich die Tippfehler beheben, die einen schon als Kind genervt haben.**
@@ -20,10 +20,10 @@ wieder einsetzen – und endlich die Tippfehler beheben, die einen schon als Kin
 
 ## 🌐 Web-App (ohne Installation)
 
-Lieber klicken als Befehle tippen? Öffne das **Text Studio** im Browser, ziehe deine ROM hinein,
+Lieber klicken als Befehle tippen? Öffne den **Web-Editor** im Browser, ziehe deine ROM hinein,
 bearbeite die Texte und lade die korrigierte ROM (oder einen Patch) herunter:
 
-**https://rofldark.github.io/kickoff3-text-tools/**
+**https://rofldark.github.io/kick-off-3-editor/**
 
 - 🔒 **Deine ROM verlässt nie den Browser.** Es gibt keinen Server: Die Seite besteht nur aus HTML und
   JavaScript und darf nicht einmal Netzwerkanfragen stellen (ihre Content-Security-Policy sagt `connect-src 'none'`).

@@ -6,7 +6,7 @@ Alle nennenswerten Änderungen an diesem Projekt. Format nach
 ## [Unreleased]
 
 ### Added
-- Web-App „Kick Off 3 Text Studio“ in `docs/` (HTML/CSS/JS ohne Build, für GitHub Pages): ROM im Browser laden,
+- Web-App „Kick Off 3 Editor“ in `docs/` (HTML/CSS/JS ohne Build, für GitHub Pages): ROM im Browser laden,
   Texte bearbeiten, korrigierte ROM bzw. `.bps`/`.ips` speichern, Änderungen als JSON sichern/laden,
   Autosave im Browser, Oberfläche Deutsch/Englisch. Die ROM verlässt den Browser nie
   (CSP `connect-src 'none'`).
@@ -23,5 +23,6 @@ Alle nennenswerten Änderungen an diesem Projekt. Format nach
 - Tests (`tests/`), `docs/ROM_NOTES.md`, englisches und deutsches README, MIT-Lizenz, `.gitignore`
 
 ### Changed
+- Projekt umbenannt in „Kick Off 3 Editor“ (GitHub-Repo `kick-off-3-editor`) für bessere Auffindbarkeit
 - Für die Veröffentlichung vorbereitet: Ausgabe und Dateinamen auf Englisch, Textdumps
   (`texte/`) und ROMs sind per `.gitignore` ausgeschlossen

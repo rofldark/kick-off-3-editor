@@ -1,5 +1,5 @@
 /*
- * Kick Off 3 Text Studio - core logic (no DOM access).
+ * Kick Off 3 Editor - core logic (no DOM access).
  * Works in the browser (global KO3) and in Node (require). A direct port of
  * kickoff3_text.py; tests/core.test.js checks both produce identical ROMs.
  */

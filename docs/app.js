@@ -1,4 +1,4 @@
-/* Kick Off 3 Text Studio - user interface. All work happens locally in this page. */
+/* Kick Off 3 Editor - user interface. All work happens locally in this page. */
 (() => {
   "use strict";
   const K = window.KO3;
